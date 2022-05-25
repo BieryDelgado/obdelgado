@@ -1,0 +1,69 @@
+#include<iostream.h>
+#include<iomanip.h>
+
+reloj de clase
+ { hora int;
+      int minuto;
+      int segundo;
+   público:
+     Reloj(int h=0, int m=0, int s=0);
+     void DefineTiempo(int, int, int);
+     void DefineHora(int);
+     void Definir Minuto (int);
+     void DefineSegundo(int);
+     int Hora(vacío);
+     int Minuto(vacío);
+     int Segundo(vacío);
+     operador vacío ++ (vacío);
+ };
+
+  Reloj::Reloj(int h, int m, int s)
+   {hora=h;
+     minuto=m;
+     segundo=s;
+   }
+
+
+  void Reloj::DefineTiempo(int h, int m, int s)
+   {hora=h;
+     minuto=m;
+     segundo=s;
+   }
+
+  void Reloj::DefineHora(int h)
+   {hora = h; }
+
+  void Reloj::Define Minuto(int m)
+   { minuto = m; }
+
+  void Reloj::DefineSegundo(int s)
+   { segundo = s; }
+
+  int Reloj::Hora(void)
+   { volver hora; }
+
+  int Reloj::Minuto(void)
+   { volver minuto; }
+
+  int Reloj::Segundo(void)
+   { volver segundos; }
+
+  void Reloj::operador ++(void)
+   { segundo++;
+     si (segundo > 59)
+      { segundo -= 60;
+        ++minuto;
+      }
+
+    si (minuto > 59)
+      { minuto -= 60;
+        ++hora;
+      }
+
+     si (hora > 23) hora -= 24;
+   }
+ vacío principal (vacío)
+ { Reloj R(10,59,56);
+   para (int i=0; i<10; i++, ++R)
+     cout <<setw(4)<< R.Hora() <<setw(4)<< R.Minuto() <<setw(4)<< R.Segundo() << endl;
+ }
