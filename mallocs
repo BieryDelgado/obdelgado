@@ -1,0 +1,52 @@
+#include<iostream>
+#include<stdelib>
+#include "progra.cpp"
+using namespace std;
+
+
+
+
+int main(){
+	
+	byte byte1;
+	byte1.setbyte(15,10);
+	cout<<byte1.getbytex()<<endl;
+	cout<<byte1.getbytey()<<endl;
+	
+	system ("pause");
+	return 0;
+}
+
+
+#include "progra.h"
+byte::byte(){
+	
+}
+
+void byte::setbyte(int _x,int _y){
+	x= _x;
+	y = _y;
+}
+int byte::getbytex(){
+	return x;
+}
+
+int byte::getbytey(){
+	return y;
+}
+
+#include<iostream>
+#include<stdelib>
+
+using namespace std;
+
+class byte{
+	private:
+		int x,y;
+	public:
+		byte();
+		void setbyte(int, int);
+		int getbytex();
+		int getbytey();
+		
+};
