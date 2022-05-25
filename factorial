@@ -1,0 +1,43 @@
+/*UNIVERSIDAD DE LAS FUERZAS ARMADAS
+PROGRAMA DE FACTORIAL
+OCLER DELGADO
+16/05/2022
+16/05/2022
+VERSION 0.01
+ESTRUCTURA DE DATOS
+NRC 4683*/
+#include< iostream>
+
+
+#include<iostream>
+#include "factorial.cpp"
+#include "facto.cpp"
+
+int main(int argc, char** argv){
+	int n=5;
+	for (int i=1;i<=n;i++){
+		printf("Suma%d", suma(i));
+		printf("factorial = %d",factorial(i));
+	}
+	return 0;
+}
+
+
+#include<iostream>
+
+void factorial::factorial(int n){
+	
+}
+int suma (int n){
+	if(n==0)
+	return 0;
+	else{
+		return n+suma(n-1);
+	}
+}#include<iostream>
+int factorial(int);
+class factorial{
+	public:
+		int factorial(int n)
+		
+};
